@@ -11,6 +11,23 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "buildbabel": "babel src -d lib",
     "eject": "react-scripts eject"
-  }
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jabbaum/ravenous.git"
+  },
+  "author": "jabbaum",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jabbaum/ravenous/issues"
+  },
+  "homepage": "https://github.com/jabbaum/ravenous#readme"
 }
