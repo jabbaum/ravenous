@@ -12,7 +12,7 @@ const business = {
   reviewCount: 90
 };//hardcoded business to represent what will be pulled by the yelp API later
 
-class Buinsess extends extends React.Component {
+class Business extends React.Component {
   render() {
     return (
     <div className="Business">
