@@ -42,6 +42,10 @@ class SearchBar extends React.Component {
     this.setState({location: e.target.value});
   }//end event handler handleTermChange
 
+  handleSearch(e) {
+    this.props.searchYelp(this.state.term, this.state.location, this.state.sortBy);
+  }//end event handler handleSearch to handle searchYelp passed in from App Component
+
   render() {
     return (
       <div className="SearchBar">
