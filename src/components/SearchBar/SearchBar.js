@@ -13,6 +13,7 @@ class SearchBar extends React.Component {
     this.state = {term: '', location: '', sortby: 'best_match'};
     this.handleTermChange = this.handleTermChange.bind(this);//binding this to the eventhandler
     this.handleLocationChange = this.handleLocationChange.bind(this);//binding this to the eventhandller
+    this.handleSearch = this.handleSearch.bind(this);
   }
 
   getSortByClass(sortByOption) {
@@ -44,6 +45,7 @@ class SearchBar extends React.Component {
 
   handleSearch(e) {
     this.props.searchYelp(this.state.term, this.state.location, this.state.sortBy);
+    e.preventDefault();//prevent the default action of clicking the button take place.
   }//end event handler handleSearch to handle searchYelp passed in from App Component
 
   render() {
@@ -58,7 +60,7 @@ class SearchBar extends React.Component {
           <input placeholder="Search Businesses" onChange={this.handleTermChange} />
           <input placeholder="Where?" onChange={this.handleLocationChange} />
         </div>
-        <div className="SearchBar-submit">
+        <div className="SearchBar-submit" onClick={this.handleSearch}>
           <a>Let's Go</a>
         </div>
       </div>
