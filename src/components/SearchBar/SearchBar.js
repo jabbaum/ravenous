@@ -19,6 +19,9 @@ class SearchBar extends React.Component {
       return '';
     }
   }//end getSortByClass method
+  handleSortByChange(sortByOption) {
+    this.setState({sortBy: sortByOption});
+  }// end event handler handleSortByChange
   renderSortByOptions() {
     return Object.keys(sortByOptions).map(sortByOption => {
       let sortByOptionValue = sortByOptions[sortByOption];
