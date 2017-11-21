@@ -17,7 +17,7 @@ class SearchBar extends React.Component {
   }
 
   getSortByClass(sortByOption) {
-    if (sortBy == sortByOption) {
+    if (this.state.sortBy == sortByOption) {
       return 'active';
     } else {
       return '';
