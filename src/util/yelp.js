@@ -1,5 +1,5 @@
 const clientId = 'Q1q4K-fn2vUbxsbzLMssNg';
-const secret = 'T4tCNUe4zLXutdQ3yCeUHJZsk8oOqhdscC3QvkuZPeiuI1HrvxfeIiLtHeGgHAwt';
+const secret = '';
 let accessToken;
 
 export let Yelp = {
@@ -33,7 +33,7 @@ export let Yelp = {
             zipCode: business.location.zip_code,
             category: business.categories[0].title,
             rating: business.rating,
-            reviewCount: business.review_count;
+            reviewCount: business.review_count
           }
         });
       }
