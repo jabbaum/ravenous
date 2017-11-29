@@ -21,8 +21,8 @@ export let Yelp = {
     }).then(response => {
       return response.json()
     }).then(jsonResponse => {
-      if (jsonResponse.business) {
-        return jsonResponse.business.map(business => {
+      if (jsonResponse.businesses) {
+        return jsonResponse.businesses.map(business => {
           return {
             id: business.id,
             imageSrc: business.image_url,
@@ -31,7 +31,7 @@ export let Yelp = {
             city: business.location.city,
             state: business.location.state,
             zipCode: business.location.zip_code,
-            category: business.categories[0].title,
+            category: business.categories,
             rating: business.rating,
             reviewCount: business.review_count
           }
