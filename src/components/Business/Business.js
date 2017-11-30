@@ -16,7 +16,13 @@ class Business extends React.Component {
           <p>{`${this.props.business.state} ${this.props.business.zipCode}`}</p>
         </div>
         <div className="Business-reviews">
-          <h3>{this.props.business.category}</h3>
+          <h3>
+          {this.props.business.category.map((category, index) => {
+              if (index < this.props.business.category.length - 1) {
+                return category.title + " | ";
+              } return category.title;
+            })}
+          </h3>
           <h3 className="rating">{`${this.props.business.rating} stars`}</h3>
           <p>{`${this.props.business.reviewCount} reviews`}</p>
         </div>
