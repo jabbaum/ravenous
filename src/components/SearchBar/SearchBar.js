@@ -10,7 +10,7 @@ const sortByOptions = {
 class SearchBar extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {term: '', location: '', sortby: 'best_match'};
+    this.state = {term: '', location: '', sortBy: 'best_match'};
     this.handleTermChange = this.handleTermChange.bind(this);//binding this to the eventhandler
     this.handleLocationChange = this.handleLocationChange.bind(this);//binding this to the eventhandller
     this.handleSearch = this.handleSearch.bind(this);
